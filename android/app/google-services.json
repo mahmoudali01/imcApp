@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "840089087507",
+    "project_id": "imcapp-ed21e",
+    "storage_bucket": "imcapp-ed21e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:840089087507:android:ce5a70c9bb65d38f3c99e6",
+        "android_client_info": {
+          "package_name": "com.example.imc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "840089087507-o9usb87qklat32p3vsk2gevqqm25591c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.imc",
+            "certificate_hash": "0fcc456ade38430411fbb1007fd4660d505b768d"
+          }
+        },
+        {
+          "client_id": "840089087507-o9opisibnnaeqekaafcol1mt678l6pc0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRGcofloLEmunF36yG1PEqGey-_B3jD9o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "840089087507-o9opisibnnaeqekaafcol1mt678l6pc0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
