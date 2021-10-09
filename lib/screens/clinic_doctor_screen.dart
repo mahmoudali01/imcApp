@@ -5,7 +5,7 @@ import 'package:imc/widgets/doctor_card.dart';
 import 'package:provider/provider.dart';
 
 class ClinicDoctors extends StatefulWidget {
-  static const routeName = '/doctor-screen';
+  static const routeName = '/clinic-screen';
 
   @override
   _ClinicDoctorsState createState() => _ClinicDoctorsState();
