@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:imc/providers/clinic_provider.dart';
 import 'package:imc/providers/doctor_provider.dart';
 import 'package:imc/screens/bottomnavigationbar.dart';
-import 'package:imc/screens/clinic_doctor_screen.dart';
-import 'package:imc/screens/clinic_screen.dart';
-import 'package:imc/screens/doctor_screen.dart';
+import 'package:imc/screens/clinic_doctors_screen.dart';
+import 'package:imc/screens/clinics_screen.dart';
+import 'package:imc/screens/doctor_details_screen.dart';
+import 'package:imc/themes.dart';
 //import 'package:imc/themes.dart';
 import 'package:provider/provider.dart';
 
@@ -32,12 +33,13 @@ class MyApp extends StatelessWidget {
         child: Builder(
           builder: (context) => MaterialApp(
               debugShowCheckedModeBanner: false,
-              theme: ThemeProvider.of(context),
+              theme: MyThemes.lightTheme,
               title: 'international medical Center',
               home: BottomNavigationBarExample(),
               routes: {
-                ClinicScreen.routeName: (ctx) => ClinicScreen(),
-                ClinicDoctors.routeName: (ctx) => DoctorScreen(),
+                ClinicsScreen.routeName: (ctx) => ClinicsScreen(),
+                ClinicDoctors.routeName: (ctx) => ClinicDoctors(),
+                DoctorDetialsScreen.routeName: (ctx) => DoctorDetialsScreen(),
               }),
         ),
       ),

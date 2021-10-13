@@ -4,6 +4,8 @@ import 'package:imc/providers/doctor_provider.dart';
 import 'package:imc/widgets/doctor_card.dart';
 import 'package:provider/provider.dart';
 
+import '../themes.dart';
+
 class ClinicDoctors extends StatefulWidget {
   static const routeName = '/clinic-screen';
 
@@ -44,18 +46,20 @@ class _ClinicDoctorsState extends State<ClinicDoctors> {
     final doctors = Provider.of<DoctorProvider>(context).doctorItems;
 
     return Scaffold(
+      backgroundColor: MyThemes.lightTheme.scaffoldBackgroundColor,
       appBar: AppBar(
         centerTitle: true,
         title: Text(
           loadedClinic.name ?? "",
           textAlign: TextAlign.end,
-          style: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-            fontSize: 20,
+          style: MyThemes.lightTheme.textTheme.headline1,
+        ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(15.0),
+            bottomRight: Radius.circular(15.0),
           ),
         ),
-        backgroundColor: Theme.of(context).primaryColor,
       ),
       body: SafeArea(
         child: Container(
@@ -69,7 +73,6 @@ class _ClinicDoctorsState extends State<ClinicDoctors> {
           ),
         ),
       ),
-      backgroundColor: Colors.black,
     );
   }
 }

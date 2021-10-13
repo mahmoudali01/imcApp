@@ -7,7 +7,9 @@ class ClinicProvider with ChangeNotifier {
     Clinic(
       id: 1,
       name: 'عيادة الاسنان',
-      clinicIcon: Icon(Icons.favorite),
+      clinicIcon: Icon(
+        Icons.favorite,
+      ),
       specialists: "٧ متخصصين",
     ),
     Clinic(
