@@ -38,6 +38,11 @@ class MyThemes {
             fontSize: 22,
             fontWeight: FontWeight.bold,
           ),
+          headline3: TextStyle(
+            color: Color(0xff409F78),
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+          ),
           // for appbar
           headline1: TextStyle(
             color: Colors.white,

@@ -3,6 +3,8 @@ import 'package:imc/providers/doctor_provider.dart';
 import 'package:imc/themes.dart';
 import 'package:provider/provider.dart';
 
+import 'booking_screen.dart';
+
 class DoctorDetialsScreen extends StatelessWidget {
   static const routeName = '/doctorscreen';
 
@@ -14,17 +16,6 @@ class DoctorDetialsScreen extends StatelessWidget {
       listen: false,
     ).findById(doctorId);
     final _kTabs = <Tab>[
-      const Tab(
-        child: Text(
-          'التقييمات ',
-          style: TextStyle(fontSize: 16, color: Colors.white),
-        ),
-        icon: Icon(
-          Icons.rate_review,
-          color: Colors.white,
-          size: 18,
-        ),
-      ),
       const Tab(
         child: Text(
           'المواعيد ',
@@ -145,32 +136,80 @@ class DoctorDetialsScreen extends StatelessWidget {
             child: TabBarView(
               children: [
                 // first tab bar view widget
+
                 Container(
                   child: Center(
                     child: Text(
-                      'CV',
+                      'الاربعاء من 9 ص الي 5 م',
+                      style: MyThemes.lightTheme.textTheme.bodyText1,
                     ),
                   ),
                 ),
-
                 // second tab bar viiew widget
-                Container(
-                  child: Center(
-                    child: Text(
-                      'Appointements',
-                    ),
-                  ),
-                ),
-                // Third tab bar viiew widget
 
-                Container(
-                  child: Center(
-                    child: Text(
-                      'Reviews',
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(15.0),
+                      child: RichText(
+                        text: TextSpan(
+                          children: [
+                            TextSpan(
+                              text: ('درس في كلية طب القصر العيني'),
+                              style: MyThemes.lightTheme.textTheme.bodyText1,
+                            ),
+                            WidgetSpan(
+                                child: SizedBox(
+                              width: 5.0,
+                            )),
+                            WidgetSpan(
+                              child: Icon(
+                                Icons.layers_sharp,
+                                size: 25,
+                                color: MyThemes.primaryColor,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                     ),
-                  ),
+                  ],
                 ),
+                /* Container(
+                  child: ListTile(
+                    trailing: Icon(Icons.layers_sharp),
+                    title: Text('درس في كلية طب القصر العيني'),
+                  ),
+                ), */
               ],
+            ),
+          ),
+          SizedBox(
+            width: double.infinity,
+            child: ElevatedButton(
+              style: TextButton.styleFrom(
+                backgroundColor: MyThemes.primaryColor,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30.0),
+                ),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 15),
+                child:
+                    Text(' حجز', style: Theme.of(context).textTheme.headline2),
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => BookingScreen(
+                            loadedDoctor.doctorImage,
+                            loadedDoctor.name,
+                          )),
+                );
+              },
             ),
           ),
         ]),
